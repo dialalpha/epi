@@ -32,6 +32,10 @@ public class ComputeRandomPermutationTest {
     private void test(int n) {
         final List<Integer> sequence = StreamUtil.sequence(n);
         final List<Integer> result = ComputeRandomPermutation.computeRandomPermutation(n);
+        if (n == 0 || n == 1) {
+            assertEquals(sequence, result);
+            return;
+        }
         assertNotEquals(sequence, result);
         assertEquals(sequence.size(), result.size());
         for (Integer i : sequence) {

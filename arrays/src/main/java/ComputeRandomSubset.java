@@ -1,5 +1,5 @@
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ComputeRandomSubset {
 
@@ -9,6 +9,7 @@ public class ComputeRandomSubset {
 
     public static List<Integer> randomSubset(int n, int k) {
 
-        return Collections.emptyList();
+        List<Integer> integers = ComputeRandomPermutation.computeRandomPermutation(n);
+        return integers.stream().limit(k).collect(Collectors.toList());
     }
 }
