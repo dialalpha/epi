@@ -3,7 +3,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class ComputeMnemonicsPhoneNumberTest {
 
@@ -12,7 +12,7 @@ public class ComputeMnemonicsPhoneNumberTest {
 
     @Test
     public void computeMnemonics1() {
-        phoneNumber = "2276696";
+        phoneNumber = "23";
         expectedResults = Arrays.asList("ACRONYM", "ABPOMZN");
 
         test(expectedResults, phoneNumber);
